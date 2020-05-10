@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 28px;
+}
+
+
+
+header {
+  height: 110px;
+  color: #fff;
+  background-color: #2c3e50;
+  background-size: cover;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+}
+
+footer {
+  width: 100%;
+  min-height: 60px;
+  background-color: #33333f;
+  border-top: 2px solid #242a33;
+  margin-top: 40px;
+}
+
+.footer-wrapper {
+  max-width: 1440px;
+  margin: auto;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-wrapper, .github {
+  display: -webkit-box;
+  display: flex;
+}
+
+.header-wrapper h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 110px;
+}
+
+.github a, .rs-school p {
+  color: #fff;
+}
+
+.github {
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.github a {
+  margin-left: 10px;
+}
+
+.github img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.search .search-input {
+  width: calc(100% - 90px);
+  max-width: 1350px;
+}
+
+@media (max-width: 1440px){
+  .wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .footer-wrapper {
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1024px){
+  .wrapper {
+    max-width: 830px;
+    margin: 0 auto;
+  }
+
+  .footer-wrapper {
+    max-width: 830px;
+  }
+}
+
+@media (max-width: 768px){
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .footer-wrapper {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 425px){
+  .wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .footer-wrapper {
+    max-width: 280px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+  .header-wrapper h1 {
+    font-size: 20px;
+  }
+
+  .github a, .rs-school p {
+    text-align: center;
+  }
+
+  .github img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .github {
+    justify-content: center;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.search {
+    position: relative;
+    font-family: Roboto,sans-serif;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    width: 100%;
+    color: #212529;
+    height: 45px; 
+}
+
+.search-input {
+  background-repeat: no-repeat;
+  background-size: 34px;
+  background-position: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  color: #7b8a8b;
+  cursor: text;
+  font-size: 22px;
+  padding: 8px 85px 8px 65px;
+  margin-right: 10px;
+}
+
+.search-button {
+  background-color: #d62c1a;
+  border: 1px solid #ca2a19;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: Roboto,sans-serif;
+  padding: 8px 15px;
+  width: 90px;
+}
+
+.search-button, .search-input {
+  display: block;
+  font-weight: 400;
+  height: 45px;
+}
+
+.info {
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    color: #d62c1a;
+}
+
+
+
+.swiper {
+  position: relative;
+}
+
+
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-container {
+  width: 90%;
+  height: 100%;
+  padding: 0 14px;
+  box-sizing: content-box;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.slider {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+  .swiper-button {
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+
+  .swiper-button-prev {
+    left: -70px;
+  }
+
+  .swiper-button-next {
+    right: -70px;
+  }
+
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .slide-card {
+    width: 300px;
+    transition: ease-in-out;
+    transition-duration: .5s;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    color: black;
+  }
+
+  .title-link {
+    color: black;
+    text-decoration: none;  
+  }
+
+  .title-link:hover {
+    text-decoration: underline;  
+  }
+
+  .title-card {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .year, .MDb {
+    position: relative;
+    margin: 0;
+    background-repeat: no-repeat;
+    padding-top: 0px;
+    margin: 25px 20px;
+}
+
+.MDb {
+  padding-left: 30px;
+}
+
+.card-image {
+  height: 450px;
+}
+
+/* .MDb:before {
+  content: "";
+  position: absolute;
+  background-image: url(/star.svg);
+  width: 24px;
+  height: 24px;
+  top: 4px;
+  left: -25px;
+} */
+
+
+@media (max-width: 320px){
+  .wrapper {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  .footer-wrapper {
+    max-width: 180px;
+  }
+  .card-image {
+    height: 250px;
+  }
+
+  .swiper-slide {
+   font-size: 15px;
+  }
+
+  .search-input {
+    padding: 8px 25px 8px 65px;
+  }
+}
+
+@media (max-width: 375px){
+  .wrapper {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  .footer-wrapper {
+    max-width: 180px;
+  }
+  .card-image {
+    height: 250px;
+  }
+
+  .swiper-slide {
+   font-size: 15px;
+  }
+
+  .search-input {
+    padding: 8px 25px 8px 65px;
+  }
+}
+
