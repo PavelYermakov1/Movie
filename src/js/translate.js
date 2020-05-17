@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import renderSearch from './renderSearch';
 
-export default function translate(request) {
+export default function sendTranslateWorld(request) {
   fetch(request)
     .then((result) => result.json()).then((data) => {
       const title = data.text[0];

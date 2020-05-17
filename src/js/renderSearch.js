@@ -52,6 +52,7 @@ export default function renderSearch(request) {
     .then((result) => result.json()).then((data) => {
       if (data.Response === 'False') {
         document.querySelector('.info').textContent = `No results for ${document.querySelector('.search-input').value} `;
+        RenderMovie();
       }
       if (document.querySelector('.swiper-wrapper').childNodes.length !== 1) {
         const myNode = document.querySelector('.swiper-wrapper');
@@ -78,7 +79,11 @@ export default function renderSearch(request) {
 
         const cardImage = document.createElement('img');
         cardImage.classList.add('card-image');
-        cardImage.setAttribute('src', `${data.Search[i].Poster}`);
+        if (data.Search[i].Poster === 'N/A') {
+          cardImage.setAttribute('src', './src/assets/image/no-poster.jpg');
+        } else {
+          cardImage.setAttribute('src', `${data.Search[i].Poster}`);
+        }
         cardImage.setAttribute('alt', `${data.Search[i].Title}`);
 
         const cardInfo = document.createElement('div');

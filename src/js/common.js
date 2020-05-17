@@ -9,13 +9,22 @@ RenderMovie();
 document.querySelector('.search-button').addEventListener('click', (event) => {
   event.preventDefault();
   const title = document.querySelector('.search-input').value;
-  changeLanguage(title);
+  if (title) {
+    changeLanguage(title);
+  } else {
+    RenderMovie();
+  }
 });
 
-document.onkeydown = (event) => {
+
+document.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
     event.preventDefault();
     const title = document.querySelector('.search-input').value;
-    changeLanguage(title);
+    if (title) {
+      changeLanguage(title);
+    } else {
+      RenderMovie();
+    }
   }
-};
+});
